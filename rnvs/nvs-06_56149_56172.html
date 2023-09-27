@@ -1,0 +1,498 @@
+<!--
+https://pandoc.org/
+pdf produit avec la commande :
++ pandoc -V papersize=a4 -V geometry=landscape --pdf-engine=pdflatex -o nvs-06_56149_56172.pdf nvs-06_56149_56172.md
+
+alternative :
++ pandoc -V papersize=a4 --pdf-engine=xelatex -o nvs-06_56149_56172.pdf nvs-06_56149_56172.md
+
+alternative :
+https://www.npmjs.com/package/md-to-pdf
++ md-to-pdf nvs-06_56149_56172.md
+
+html produit avec la commande :
++ pandoc -V papersize=a4 --pdf-engine=xelatex -o nvs-06_56149_56172.html nvs-06_56149_56172.md
+
+alternative :
+https://www.npmjs.com/package/markdown-to-html
++ markdown nvs-06_56149_56172.md > nvs-06_56149_56172.html
+-->
+<!-- # commentaires nvs : stratego : nvs-06 -->
+<h1 id="stratego-nvs-06-56149-56172">Stratego : nvs-06 (56149 &amp;
+56172)</h1>
+<h2 id="dépôt">dépôt</h2>
+<p><a
+href="https://git.esi-bru.be/56172/56149_stratego_56172">https://git.esi-bru.be/56172/56149_stratego_56172</a></p>
+<p><code>git@git.esi-bru.be:56172/56149_stratego_56172.git</code></p>
+<h3 id="gitignore">.gitignore</h3>
+<p>il y a bien un fichier <code>.gitignore</code>, mais il n’a pas été
+utilisé dès le début : le répertoire <code>.git</code> fait 17,3
+Mio.</p>
+<h2 id="modélisation">modélisation</h2>
+<h3 id="remise">remise</h3>
+<h4 id="tag-commit">tag / commit</h4>
+<p>ok.</p>
+<h4 id="retard">retard</h4>
+<p>(void)</p>
+<h4 id="autre">autre</h4>
+<p>(void)</p>
+<h3 id="analyse">analyse</h3>
+<p>retour fait oralement.</p>
+<h2 id="console">console</h2>
+<h3 id="remise-1">remise</h3>
+<h4 id="tag-commit-1">tag / commit</h4>
+<ul>
+<li>ko : pas de <code>tag</code> ni de message de <code>commit</code>
+avec le texte <code>console release</code>.</li>
+</ul>
+<h4 id="retard-1">retard</h4>
+<p>(void)</p>
+<h4 id="autre-1">autre</h4>
+<p>(void)</p>
+<h3 id="documentation">documentation</h3>
+<ul>
+<li>les fichiers ne sont pas documentés =&gt; pas de documentation
+produite pour les énumérations <code>LEVEL</code>,
+<code>DIRECTION</code>, <code>PLAYER</code>, <code>PIECE</code> et
+<code>STATUS</code>.</li>
+<li>pas de documentation des fonctions / opérateurs
+<code>std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, GameElement const &amp; dt)</code>
+et
+<code>std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, const Position&amp; pos)</code>.</li>
+<li>pas de documentation pour les destructeurs d’<code>Observer</code>
+et d’<code>Observable</code>.</li>
+<li>pour le reste, les méthodes publiques et privées sont bien
+documentées.</li>
+</ul>
+<h4 id="fichier-de-configuration-uniquement">fichier de configuration
+uniquement</h4>
+<p>ok.</p>
+<p>à l’ouverture de celui-ci avec doxywizard (doxygen 1.9.1), j’obtiens
+:</p>
+<pre><code>warning: ignoring unsupported tag &#39;SHOW_HEADERFILE&#39; at line 609, file C:/.../nvs-06_56149_56172/Doxyfile
+warning: ignoring unsupported tag &#39;WARN_IF_INCOMPLETE_DOC&#39; at line 827, file C:/.../nvs-06_56149_56172/Doxyfile
+warning: ignoring unsupported tag &#39;DOCSET_FEEDURL&#39; at line 1410, file C:/.../nvs-06_56149_56172/Doxyfile
+warning: ignoring unsupported tag &#39;FULL_SIDEBAR&#39; at line 1621, file C:/.../nvs-06_56149_56172/Doxyfile
+warning: ignoring unsupported tag &#39;OBFUSCATE_EMAILS&#39; at line 1652, file C:/.../nvs-06_56149_56172/Doxyfile
+warning: ignoring unsupported tag &#39;MATHJAX_VERSION&#39; at line 1711, file C:/.../nvs-06_56149_56172/Doxyfile
+warning: ignoring unsupported tag &#39;DIR_GRAPH_MAX_DEPTH&#39; at line 2568, file C:/.../nvs-06_56149_56172/Doxyfile</code></pre>
+<p>lorsque je compile, j’obtiens :</p>
+<pre><code>warning: tag INPUT: input source &#39;C:/Users/Administrator/56149_stratego_56172/Stratego&#39; does not exist
+Doxygen version used: 1.9.1 (ef9b20ac7f8a8621fcfc299f8bd0b80422390f4b)
+error: tag OUTPUT_DIRECTORY: Output directory &#39;C:/Users/Administrator/56149_stratego_56172&#39; does not exist and cannot be created
+Exiting...
+*** Doxygen has finished</code></pre>
+<p>je modifie le fichier de configuration avec des chemins
+<em>relatifs</em> pour les dossiers source et destination et ça passe
+avec quand même une erreur :</p>
+<pre><code>error: Project logo &#39;C:/Users/Administrator/Desktop/communityIcon_i69s9qgzn1541.png&#39; specified by PROJECT_LOGO does not exist!
+lookup cache used 230/65536 hits=912 misses=245</code></pre>
+<p>le fichier <code>communityIcon_i69s9qgzn1541.png</code> ne se trouve
+pas dans le dépôt…</p>
+<h3 id="rapport">rapport</h3>
+<h4 id="format-pdf">format pdf</h4>
+<p>ok.</p>
+<h4 id="bogue-non-signalé">bogue non signalé</h4>
+<p>(void)</p>
+<h4 id="écart-ajout-non-signalé">écart / ajout non signalé</h4>
+<p>(void)</p>
+<h4 id="autre-2">autre</h4>
+<p>(void)</p>
+<h3 id="rapport-code">rapport / code</h3>
+<h4 id="avertissement-restant">avertissement restant</h4>
+<h5 id="gcc">gcc</h5>
+<h6 id="signalé">signalé</h6>
+<p>(void)</p>
+<h6 id="non-signalé">non signalé</h6>
+<p>(void)</p>
+<h5 id="gcc-clang-analyzer">gcc + clang-analyzer</h5>
+<p>(void)</p>
+<h5 id="clang">clang++</h5>
+<p>(void)</p>
+<h5 id="clang-clang-analyzer">clang++ + clang-analyzer</h5>
+<p>(void)</p>
+<h5 id="cppcheck">cppcheck</h5>
+<h6 id="signalé-1">signalé</h6>
+<pre><code>model/board.cpp: 114:16 [model/board.cpp:110] -&gt; [model/board.cpp:114]
+style : knownConditionTrueFalse
+        if(row &gt;= 0 &amp;&amp; row &lt;= 3){
+               ^
+Condition &#39;row&gt;=0&#39; is always true</code></pre>
+<pre><code>model/game.cpp: 111:45 [model/game.cpp:111]
+style : constParameter
+optional&lt;GameElement&gt; Game::move(Position &amp; p, DIRECTION &amp; d, int distance){
+                                            ^
+Parameter &#39;p&#39; can be declared with const</code></pre>
+<h6 id="non-signalé-1">non signalé</h6>
+<pre><code>model/game.h: 32:10 [model/game.cpp:49] -&gt; [model/game.h:32]
+style (inconclusive) : functionConst
+    bool checkCanMakeMove(std::vector&lt;std::string&gt; &amp;);
+         ^
+Technically the member function &#39;Game::checkCanMakeMove&#39; can be const.</code></pre>
+<pre><code>model/game.h: 162:10 [model/game.cpp:261] -&gt; [model/game.h:162]
+performance (inconclusive) : functionStatic
+    bool goodFile(std::vector&lt;std::string&gt; const &amp; pieces);
+         ^
+Technically the member function &#39;Game::goodFile&#39; can be static (but you may consider moving to unnamed namespace).</code></pre>
+<pre><code>model/gameElement.h: 30:5 [model/gameElement.h:30]
+style : noExplicitConstructor
+    GameElement(std::string const &amp; decor);
+    ^
+Class &#39;GameElement&#39; has a constructor with 1 argument that is not explicit.</code></pre>
+<pre><code>model/game.h: 60:5 [model/game.h:60]
+style : noExplicitConstructor
+    Game(Board &amp; board, LEVEL level = DEBUTANT);
+    ^
+Class &#39;Game&#39; has a constructor with 1 argument that is not explicit.</code></pre>
+<pre><code>model/board.h: 135:20 [model/board.h:137] -&gt; [model/board.h:135]
+style (inconclusive) : duplicateBranch
+            } else if(bd.getSoldier(Position(i,j)).getDecor() == &quot;W&quot;){
+                   ^
+Found duplicate branches for &#39;if&#39; and &#39;else&#39;.</code></pre>
+<pre><code>nofile: 0:0
+information : missingInclude
+
+Cppcheck cannot find all the include files (use --check-config for details)</code></pre>
+<p>?</p>
+<h3 id="code-source">code source</h3>
+<h4 id="portabilité">portabilité</h4>
+<h5 id="casse-noms-fichiers">casse noms fichiers</h5>
+<p>ok.</p>
+<h5 id="séparateur">séparateur /</h5>
+<p>ok.</p>
+<h5 id="c-standard">c++ standard</h5>
+<p>ok.</p>
+<h5 id="si-pas-std-portabilité">si pas std : portabilité</h5>
+<p>(void)</p>
+<h4 id="bonnes-pratiques">bonnes pratiques</h4>
+<h5 id="déclarations-anticipées-si-possible">déclarations anticipées si
+possible</h5>
+<ul>
+<li><p>dans <code>position.h</code> :</p>
+<pre><code>// #include &lt;iostream&gt;  // rnvs : include / déclaration anticipée
+#include &lt;string&gt;       // rnvs : include / déclaration anticipée
+#include &lt;ostream&gt;      // rnvs : include / déclaration anticipée</code></pre></li>
+<li><p>dans <code>game.h</code> :</p>
+<pre><code>// #include &quot;board.h&quot;       // rnvs : include / déclaration anticipée
+
+#include &quot;enum.h&quot;           // rnvs : include / déclaration anticipée
+#include &lt;optional&gt;         // rnvs : include / déclaration anticipée
+#include &lt;vector&gt;           // rnvs : include / déclaration anticipée
+#include &lt;string&gt;           // rnvs : include / déclaration anticipée
+
+class Board;                // rnvs : include / déclaration anticipée
+class GameElement;          // rnvs : include / déclaration anticipée
+class Position;             // rnvs : include / déclaration anticipée</code></pre></li>
+<li><p>dans <code>board.h</code> :</p>
+<pre><code>#include &quot;enum.h&quot;           // rnvs : include / déclaration anticipée</code></pre></li>
+<li><p>dans <code>view.h</code> :</p>
+<pre><code>// #include &quot;model/game.h&quot;      // rnvs : include / déclaration anticipée
+// #include &quot;keyboardAndStringConvert/keyboard.hpp&quot; // rnvs : include / déclaration anticipée
+#include &lt;optional&gt;     // rnvs : include / déclaration anticipée
+
+class Game;         // rnvs : include / déclaration anticipée
+class GameElement;  // rnvs : include / déclaration anticipée
+class Position;     // rnvs : include / déclaration anticipée</code></pre></li>
+</ul>
+<h5 id="using-namespace-dans-.h">using namespace dans .h</h5>
+<p>ok.</p>
+<h5 id="autre-3">autre</h5>
+<p>(void)</p>
+<h4 id="gestion-de-la-mémoire">gestion de la mémoire</h4>
+<p>ok : pas de <code>new</code> dans les classes métier ni celles de
+l’application console.</p>
+<h4 id="tests-unitaires">tests unitaires</h4>
+<p>(ceci n’est pas demandé)</p>
+<p>(void)</p>
+<h4 id="classes-métier">classes métier</h4>
+<h5 id="initialisation">initialisation</h5>
+<h6 id="plateau">plateau</h6>
+<p>ok : plateau de jeu construit vide avec les pièces d’eau bien
+positionnées.</p>
+<p class="heading" id="interactive">interactive</p>
+<p>le travail est bien réalisé, mais ko :</p>
+<ul>
+<li>explosé entre contrôleur et métier</li>
+<li>voir
+<code>Controller::initialiseGamePlacement(PLAYER currentPlayer)</code>
+et
+<code>Controller::fillVectorSoldier(vector&lt;GameElement&gt; &amp; soldier, PLAYER color)</code>.</li>
+<li>voir
+<code>Game::initializeBattleField(const Position &amp; p, PLAYER player, const GameElement &amp; s)</code>.</li>
+</ul>
+<p class="heading" id="fichiers">fichiers</p>
+<p>ok : voir
+<code>Game::initializeBattelField(const vector&lt;string&gt; &amp; file)</code>
+et
+<code>Board::initializeBattleField(vector&lt;string&gt; s, PLAYER player)</code>.</p>
+<p>ko :</p>
+<ul>
+<li>c’est le même fichier qui est utilisé pour les 2 joueurs (voir
+<code>Game::initializeBattelField(const vector&lt;string&gt; &amp; file)</code>),
+contrairement à ce qui est demandé dans l’énoncé.</li>
+</ul>
+<p class="heading"
+id="validation-du-nombre-de-pièces-de-chaque-type">validation du nombre
+de pièces de chaque type</p>
+<ul>
+<li><p>interactif : ko :
+<code>Board::canBePlaceStart(Position p, PLAYER player)</code> ne
+vérifie que si le placement se fait sur les bonnes lignes et pas sur de
+l’eau. le contrôle du nombre se fait dans
+<code>Controller::initialiseGamePlacement(PLAYER currentPlayer)</code>
+et
+<code>Controller::fillVectorSoldier(vector&lt;GameElement&gt; &amp; soldier, PLAYER color)</code>,
+il n’est pas réalisé par les classes métier, mais le
+contrôleur.</p></li>
+<li><p>fichiers : ko : on a bien une méthode du modèle
+<code>Game::goodFile(vector&lt;string&gt; const &amp; pieces)</code>
+mais elle n’est pas appelée automatiquement par
+<code>Game::initializeBattelField(const vector&lt;string&gt; &amp; file)</code>
+mais par le contrôleur dans
+<code>Controller::initialiseGameFile()</code>.</p></li>
+</ul>
+<h6 id="possibilité-de-mode-débutant">possibilité de mode débutant</h6>
+<p>ok : <code>Game::setLevel(LEVEL level)</code> uniquement utilisable
+quand le jeu est dans l’état <code>PLACEMENT</code>.</p>
+<h6 id="joueurs-éventuellement">joueurs (éventuellement)</h6>
+<p>(void)</p>
+<h5 id="déplacement">déplacement</h5>
+<h6 id="obligatoire">obligatoire</h6>
+<p>ok :
+<code>Game::move(Position &amp; p, DIRECTION &amp; d, int distance)</code>
+vérifie que le jeu est dans l’état <code>MOVE</code> et change cet état
+si le mouvement a bien eu lieu.</p>
+<p>ko :</p>
+<ul>
+<li>je ne vois pas où dans les méthodes métier on vérifie que la
+position de départ contient bien un pion du joueur actif.</li>
+</ul>
+<h6 id="pièces-deau-inaccessibles">pièces d’eau inaccessibles</h6>
+<p>ok : <code>Board::canBePlace(const Position &amp; p)</code> appelé
+par méthode métier de déplacement.</p>
+<h6 id="éclaireur">éclaireur</h6>
+<p class="heading" id="latéral-uniquement">latéral uniquement</p>
+<p>ok :
+<code>Game::move(Position &amp; p, DIRECTION &amp; d, int distance)</code>
+utilise une direction parmi <code>GAUCHE</code>, <code>DROITE</code>,
+<code>HAUT</code>et <code>BAS</code>.</p>
+<p class="heading" id="illimité-sauf-obstacle">illimité sauf
+obstacle</p>
+<p>ok :
+<code>Board::moveEclaireur(Position &amp; p, Position &amp; toGo, Position dir, int distance)</code>
+utilise itérativement
+<code>Board::canBePlace(const Position &amp; p)</code> qui le
+vérifie.</p>
+<h6 id="bombes-et-drapeau-immobiles">bombes et drapeau immobiles</h6>
+<p>ok :</p>
+<ul>
+<li><code>Board::move(Position p, DIRECTION dir, int distance)</code> le
+vérifie.</li>
+<li><em>rem.</em> :
+<code>Controller::conditionPosition(Position pos, Position toGo)</code>
+se charge également de le vérifier.</li>
+</ul>
+<h6 id="autres-pièces">autres pièces</h6>
+<p class="heading" id="latéral-uniquement-1">latéral uniquement</p>
+<p>ok :
+<code>Game::move(Position &amp; p, DIRECTION &amp; d, int distance)</code>
+utilise une direction parmi <code>GAUCHE</code>, <code>DROITE</code>,
+<code>HAUT</code>et <code>BAS</code>.</p>
+<p class="heading" id="une-seule-position">une seule position</p>
+<p>ok :
+<code>Board::move(Position p, DIRECTION dir, int distance)</code> le
+vérifie
+(<code>if (distance &gt; 1 &amp;&amp; getSoldier(p).getRole() == ECLAIREUR)</code>).</p>
+<h6 id="limite-des-3-allers---retours">limite des 3 allers -
+retours</h6>
+<p>ok : voir
+<code>Game::move(Position &amp; p, DIRECTION &amp; d, int distance)</code>,
+<code>Game::fillMovementList(bool &amp; canMakeMove, Position toGo)</code>
+et
+<code>Game::checkCanMakeMove(vector&lt;string&gt; &amp; movement)</code>.</p>
+<h5 id="combat">combat</h5>
+<h6 id="détection">détection</h6>
+<p>ok : voir
+<code>Board::move(Position p, DIRECTION dir, int distance)</code>.</p>
+<h6 id="résolution">résolution</h6>
+<p>ok : voir
+<code>Board::attack(Position p , Position toAttack)</code>.</p>
+<p class="heading" id="cas-de-lespionne">cas de l’espionne</p>
+<p>ok : voir
+<code>Board::attack(Position p , Position toAttack)</code>.</p>
+<h5 id="fin-de-partie">fin de partie</h5>
+<p>ok : <code>Board::endGame()</code> invoqué par
+<code>Game::endGame()</code> elle-même par
+<code>Game::move(Position &amp; p, DIRECTION &amp; d, int distance)</code>.</p>
+<h6 id="par-prise-de-drapeau">par prise de drapeau</h6>
+<p>ok : voir <code>Board::endGame()</code>.</p>
+<h6 id="par-impossibilité-de-déplacement">par impossibilité de
+déplacement</h6>
+<p>ok : voir <code>Board::endGame()</code>.</p>
+<p>ko :</p>
+<ul>
+<li>dans <code>Board::endGame()</code> on vérifie s’il reste des pions
+déplaçables <em>en théorie</em>, mais il n’y a pas de vérification si
+effectivement ils sont déplaçables.</li>
+</ul>
+<h5 id="méthodes">méthodes</h5>
+<h6 id="complètes-1-méthode-1-action-de-jeu">complètes : 1 méthode / 1
+action de jeu</h6>
+<p>ko :</p>
+<ul>
+<li>le placement interactif est <em>splitté</em> entre
+<code>Controller</code> et <code>Game</code> (voir ci-dessus).</li>
+<li>le placement via fichier est <em>splitté</em> entre
+<code>Controller</code> et <code>Game</code> (voir ci-dessus).</li>
+<li>pour ce qui concerne le déplacement, le contrôleur réalise des
+vérifications qui sont réalisées à nouveau dans les méthodes métier.
+c’est donc ok pour les déplacements et combats.</li>
+</ul>
+<h6 id="impossibilité-de-tricher-bibliothèque">impossibilité de tricher
+(bibliothèque)</h6>
+<p>totalement ko :</p>
+<ul>
+<li><p>le <code>Board</code> est fourni par référence au
+<code>Game</code>. il est dès lors possible d’y accéder en toute liberté
+sans aucun contrôle des méthodes de <code>Game</code> et de l’état du
+jeu. c’est dommage car dans <code>Game</code>, il y a utilisation d’un
+état (sans <em>setter</em>) pour bien verrouiller l’appel des méthodes
+publiques et que le <em>getter</em> optional<GameElement>
+Game::getSoldier(Position p) retourne des clones des éléments de
+jeu.</p>
+<p><em>rem.</em> : contrairement à ce qu’il semble, il n’y a pas de
+<em>getter</em> de <code>Board</code> implémenté.</p>
+<p>le problème, c’est qu’on a accès au plateau directement sur celui
+;fourni au constructeur de <code>Game</code>. il suffirait très
+probablement de cloner le <code>Board</code> lors de la construction du
+<code>Game</code>…</p></li>
+<li></li>
+</ul>
+<h4 id="contrôleur">contrôleur</h4>
+<h5 id="fiabilisation-lectures-clavier">fiabilisation lectures
+clavier</h5>
+<p>ok.</p>
+<h5 id="respect-de-la-convention-didentification-des-cases">respect de
+la convention d’identification des cases</h5>
+<p>ok.</p>
+<h6 id="légende">légende</h6>
+<p>ok.</p>
+<h5 id="convivialité">convivialité</h5>
+<ul>
+<li>il est assez pénible de devoir taper <code>BAS</code>,
+<code>HAUT</code>, <code>GAUCHE</code>, <code>DROITE</code> : l’initiale
+pourrait suffire. c’est la même chose pour indiquer le type de jeu et
+d’initialisation.</li>
+<li>pas de détection de sélection d’une pièce déplaçable : il faut
+fournir une direction.</li>
+</ul>
+<h5 id="alternance-des-joueurs">alternance des joueurs</h5>
+<h6 id="plateau-caché-entre-les-joueurs">plateau caché entre les
+joueurs</h6>
+<p>ok : défilement vertical de l’affichage.</p>
+<h6 id="information-si-un-combat-a-eu-lieu">information si un combat a
+eu lieu</h6>
+<p>ok : uniquement en mode normal. en mode débutant, on voit le pions
+adverse. en cas d’égalité, c’est un peu moins évident de savoir où et si
+un combat a eu lieu.</p>
+<h4 id="vue">vue</h4>
+<h5 id="design-pattern-observer">design pattern observer</h5>
+<p>ko :</p>
+<ul>
+<li>il y a des classes <code>Observable</code> et <code>Observer</code>,
+mais elles ne sont pas utilisées.</li>
+<li>la classe <code>View</code> n’est pas un observateur, la classe
+<code>Game</code> n’est pas observable.</li>
+<li>c’est dans les méthodes de la classe <code>Controller</code> que les
+méthodes de <code>View</code> et <code>Game</code> sont explicitement
+invoquées =&gt; pas de notification automatique, donc pas réellement de
+vue attachée à un modèle =&gt; MVC pas ok.</li>
+</ul>
+<h5 id="absence-de-flux-cout-dans-classes-métier">absence de flux (cout)
+dans classes métier</h5>
+<p>ok.</p>
+<h5 id="affichage">affichage</h5>
+<h6 id="masqué-en-mode-normal">masqué en mode normal</h6>
+<p>ok.</p>
+<h6 id="éventuellement-non-masqué-en-mode-débutant">éventuellement non
+masqué en mode débutant</h6>
+<p>ok.</p>
+<h6 id="cimetière">cimetière</h6>
+<p>pas mis en œuvre.</p>
+<h4 id="autre-4">autre</h4>
+<ul>
+<li>pas de fichier de configuration de plateau fourni.</li>
+</ul>
+<h2 id="gui">gui</h2>
+<h3 id="remise-2">remise</h3>
+<h4 id="tag-commit-2">tag / commit</h4>
+<ul>
+<li>pas de <em>tag</em> <code>gui</code>.</li>
+<li>plusieurs <em>commits</em> où <code>gui</code> apparaît, mais pas
+<code>gui release</code>.</li>
+</ul>
+<h4 id="retard-2">retard</h4>
+<p>(void)</p>
+<h4 id="autre-5">autre</h4>
+<p>(void)</p>
+<h3 id="documentation-1">documentation</h3>
+<ul>
+<li>pas de fichier pour doxygen.</li>
+<li>pas de documentation fournie.</li>
+<li>les fichiers et classes graphiques ne sont pas documentés. les
+méthodes publiques et privées des classes graphiques sont partiellement
+documentées.</li>
+</ul>
+<h3 id="rapport-1">rapport</h3>
+<h4 id="format-pdf-1">format pdf</h4>
+<p>ok.</p>
+<h4 id="bogue-non-signalé-1">bogue non signalé</h4>
+<p>(void)</p>
+<h4 id="écart-ajout-non-signalé-1">écart / ajout non signalé</h4>
+<p>(void)</p>
+<h4 id="autre-6">autre</h4>
+<p>(void)</p>
+<h3 id="code-source-1">code source</h3>
+<h4 id="portabilité-1">portabilité</h4>
+<h5 id="casse-noms-fichiers-1">casse noms fichiers</h5>
+<p>ok.</p>
+<h5 id="séparateur-1">séparateur /</h5>
+<p>ok.</p>
+<h5 id="c-standard-qt">c++ standard + qt</h5>
+<p>ok.</p>
+<h5 id="si-pas-std-qt-portabilité">si pas std + qt : portabilité</h5>
+<p>(void)</p>
+<h4 id="gestion-de-la-mémoire-1">gestion de la mémoire</h4>
+<p>(void)</p>
+<h4 id="contrôleur-1">contrôleur</h4>
+<h5 id="respect-des-règles">respect des règles</h5>
+<p>ko :</p>
+<ul>
+<li>un seul fichier lu : les 2 joueurs utilisent le même en miroir.</li>
+</ul>
+<h5 id="convivialité-1">convivialité</h5>
+<ul>
+<li>placement interactif propre et facile : ok.</li>
+<li>choix des fichiers avec <code>QFileDialog</code> : ok.</li>
+<li>choix d’une direction avec touches fléchées (on peut changer tant
+qu’on veut), puis du pion à déplacer : c’est moyennement convivial mais
+je suppose qu’on s’y habitue.</li>
+</ul>
+<h4 id="vue-1">vue</h4>
+<h5 id="design-pattern-observer-1">design pattern observer</h5>
+<p>ok.</p>
+<h5 id="convivialité-2">convivialité</h5>
+<ul>
+<li>image et valeurs des pions : ok.</li>
+<li>rapport de combat en mode normal.</li>
+<li>pas de masquage du plateau entre les 2 joueurs.</li>
+<li><em>rem.</em> : sous gnu / linux l’image de fond et celle de l’eau
+disparaît après placement des pions (testé uniquement pour lecture de
+fichier).</li>
+</ul>
+<h4 id="autre-7">autre</h4>
+<ul>
+<li>pas de fichier de placement initial fourni.</li>
+</ul>
+<h2 id="examen">examen</h2>
+<p>retours faits le jour même.</p>

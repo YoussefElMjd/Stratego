@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ressources/logo.png</file>
+        <file>ressources/unknown.png</file>
+        <file>ressources/sable.png</file>
+        <file>ressources/water.png</file>
+        <file>ressources/stratego-miner.png</file>
+        <file>ressources/battlefield.png</file>
+        <file>ressources/stratego-miner-red.png</file>
+        <file>ressources/stratego-bomb.png</file>
+        <file>ressources/stratego-bomb-red.png</file>
+        <file>ressources/stratego-captain.png</file>
+        <file>ressources/stratego-captain-red.png</file>
+        <file>ressources/stratego-colonel.png</file>
+        <file>ressources/stratego-colonel-red.png</file>
+        <file>ressources/stratego-general.png</file>
+        <file>ressources/stratego-general-red.png</file>
+        <file>ressources/stratego-lieutenant.png</file>
+        <file>ressources/stratego-lieutenant-red.png</file>
+        <file>ressources/stratego-major.png</file>
+        <file>ressources/stratego-major-red.png</file>
+        <file>ressources/stratego-red.png</file>
+        <file>ressources/stratego-scout.png</file>
+        <file>ressources/stratego-scout-red.png</file>
+        <file>ressources/stratego-sergeant.png</file>
+        <file>ressources/stratego-sergeant-red.png</file>
+        <file>ressources/stratego-spy.png</file>
+        <file>ressources/stratego-spy-red.png</file>
+        <file>ressources/flag.png</file>
+        <file>ressources/stratego-blue.png</file>
+    </qresource>
+</RCC>
